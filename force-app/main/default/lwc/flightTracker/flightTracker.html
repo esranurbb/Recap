@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Flight Tracker" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Flight Number" value={flightNumber} onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Track Flight" onclick={handleTrackFlight}></lightning-button>
+            <template if:true={flightData}>
+                <p><strong>Flight Number:</strong> {flightData.ident}</p>
+                <p><strong>Origin:</strong> {flightData.origin}</p>
+                <p><strong>Destination:</strong> {flightData.destination}</p>
+                <p><strong>Departure Time:</strong> {flightData.filed_departure_time}</p>
+                <p><strong>Arrival Time:</strong> {flightData.estimated_arrival_time}</p>
+                <p><strong>Terminal:</strong> {flightData.terminal}</p>
+                <p><strong>Gate:</strong> {flightData.gate}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title = 'CONDITIOANL RENDERING 1'>
+        <div class="slds-var-m-around_medium">
+            <template if:true={showContent}>
+                {dataIfTrue}
+            </template>
+            <template if:false={showContent}>
+                {showIfFalse}
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

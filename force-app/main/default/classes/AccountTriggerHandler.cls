@@ -10,7 +10,7 @@ public with sharing class AccountTriggerHandler {
                 con.FirstName = 'Default';
                 con.LastName = acc.Name;
                 con.AccountId = acc.Id;
-                con.Email = 'a@gmail.com';
+                con.Email = 'changes@gmail.com';
                 contactsCreated.add(con);
             }
             if(!contactsCreated.isEmpty()){
